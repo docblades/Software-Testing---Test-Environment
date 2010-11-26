@@ -43,7 +43,7 @@ def calc_tax(inc, dep):
     else:
         tax = tax
 
-    # print "income = ", inc, " dependent = ", dep, " tax = ", tax
+    print "income = {0} dependent = {1} tax = {2}".format(inc, dep, tax)
 
     return (inc, dep, tax)
         
