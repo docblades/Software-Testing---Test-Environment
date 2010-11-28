@@ -57,10 +57,10 @@ def do_test(test_cases):
         test_in = test_case[0]
         test_out = test_case[1]
         if is_correct(test_in, test_out):
-            print "*"
+            print "PASS"
             continue
         else:
-            print '-'
+            print 'FAIL'
             failures.append((test_in, test_out, calc_tax(test_in[0], test_in[1])))
 
     for fail in failures:
@@ -69,7 +69,7 @@ def do_test(test_cases):
     failnum = len(failures)
     testnum = len(test_cases)
 
-    print "{0} of {1} test cases passed ({2:.1%})".format(testnum, testnum - failnum, float((testnum - failnum)) / testnum)
+    print "{1} of {0} test cases passed ({2:.1%})".format(testnum, testnum - failnum, float((testnum - failnum)) / testnum)
     
 
 if __name__ == "__main__":

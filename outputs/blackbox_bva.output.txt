@@ -1,0 +1,25 @@
+income = -1 dependent = 0 tax = -0.13
+FAIL
+income = -1 dependent = 0 tax = -0.13
+income = 0 dependent = 1 tax = 0.0
+PASS
+income = 20000 dependent = 2 tax = 600.0
+PASS
+income = 20001 dependent = 3 tax = 750.0375
+PASS
+income = 30000 dependent = 4 tax = 900.0
+PASS
+income = 30001 dependent = 0 tax = 1800.06
+PASS
+income = 40000 dependent = 1 tax = 2160.0
+PASS
+income = 40001 dependent = 2 tax = 2100.0525
+PASS
+income = 50000 dependent = 3 tax = 2625.0
+PASS
+income = 90000 dependent = 0 tax = 9000.0
+PASS
+income = 90001 dependent = 1 tax = 10530.117
+PASS
+FAIL: input:  (-1, 0) , expected output:  (-1, 0, 0) , actual output:  (-1, 0, -0.13)
+10 of 11 test cases passed (90.9%)
