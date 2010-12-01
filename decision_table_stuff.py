@@ -62,12 +62,12 @@ def calc_tax(inc, dep):
 def is_correct(test_input, expected_actions):
     actual_out = calc_tax(test_input[0], test_input[1])
     actual_actions = actual_out[2]
-    for i in range(0, 5):
+    for i in range(0, 6):
         if expected_actions[1][i] == None:
             continue
         if expected_actions[1][i] != actual_actions[1][i]:
             return False
-    for i in range(0, 3):
+    for i in range(0, 4):
         if expected_actions[2][i] == None:
             continue
         if expected_actions[2][i] != actual_actions[2][i]:
@@ -77,8 +77,8 @@ def is_correct(test_input, expected_actions):
 def do_test(test_cases):
     failures = []
     for test_case in test_cases:
-        test_in = test_case[0]
-        expected_actions = test_case[1]
+        test_in = test_case
+        expected_actions = test_case[2]
         if is_correct(test_in, expected_actions):
             print "PASS"
             continue
@@ -87,7 +87,9 @@ def do_test(test_cases):
             failures.append((test_in, expected_actions, calc_tax(test_in[0], test_in[1])))
 
     for fail in failures:
-        print "FAIL: input: ", fail[0], ", expected actions: ", fail[1], ", actual actions: ", fail[2][2]
+        print "FAIL: input: ", (fail[0][0], fail[0][1])
+        print "expected actions: ", fail[1]
+        print "actual actions: ", fail[2][2]
 
     failnum = len(failures)
     testnum = len(test_cases)

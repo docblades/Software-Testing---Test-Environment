@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import decision_table_stuff as testenv
 
 # Example
@@ -8,7 +9,7 @@ test_cases = [
     (1,
      0,
      {1: [True, False, False, False, False, False],
-      2: [False, False, False, True]}
+      2: [False, False, False, False]}
      ),
     (20001,
      1,
@@ -22,4 +23,4 @@ test_cases = [
      )
     ]
 
-test_env.do_test(test_cases)
+testenv.do_test(test_cases)
