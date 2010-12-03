@@ -61,18 +61,18 @@ test_cases = [
       2: [False, True, False, False]}
      ),
     (50001,
-     1,
+     2,
      {1: [False, False, False, False, True, False, False],
       2: [False, True, False, False]}
      ),
     (90001,
-     1,
-     {1: [False, False, False, False, False, True, False],
+     2,
+     {1: [False, False, False, False, False, False, True],
       2: [False, True, False, False]}
      ),
     (0,
-     1,
-     {1: [False, False, False, False, False, False, True],
+     2,
+     {1: [False, False, False, False, False, True, False],
       2: [False, True, False, False]}
      ),
     (1, 
