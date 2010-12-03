@@ -2,7 +2,7 @@
 
 def calc_tax(inc, dep):
     bracket = 0
-    actions = {1: [False, False, False, False, False, False],
+    actions = {1: [False, False, False, False, False, False, False],
                2: [False, False, False, False]}
     if (0 < inc <= 20000):
         bracket = 1
@@ -38,6 +38,7 @@ def calc_tax(inc, dep):
             actions[1][5] = True
         else:
             print "something is wrong with the income bracket computation"
+            actions[1][6] = True
         return tax
 
     tax = switch(bracket)
@@ -62,7 +63,7 @@ def calc_tax(inc, dep):
 def is_correct(test_input, expected_actions):
     actual_out = calc_tax(test_input[0], test_input[1])
     actual_actions = actual_out[2]
-    for i in range(0, 6):
+    for i in range(0, 7):
         if expected_actions[1][i] == None:
             continue
         if expected_actions[1][i] != actual_actions[1][i]:
