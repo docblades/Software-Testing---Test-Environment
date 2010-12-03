@@ -63,7 +63,7 @@ def calc_tax(inc, dep):
 def is_correct(test_input, expected_actions):
     actual_out = calc_tax(test_input[0], test_input[1])
     actual_actions = actual_out[2]
-    for i in range(0, 7):
+    for i in range(0, 6):
         if expected_actions[1][i] == None:
             continue
         if expected_actions[1][i] != actual_actions[1][i]:
