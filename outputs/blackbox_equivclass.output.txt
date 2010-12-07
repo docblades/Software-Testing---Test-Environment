@@ -1,0 +1,65 @@
+income = 95000 dependent = 0 tax = 12350.0
+PASS
+income = 95000 dependent = 1 tax = 11115.0
+PASS
+income = 95000 dependent = 2 tax = 9262.5
+PASS
+income = 95000 dependent = 4 tax = 7410.0
+PASS
+income = 70000 dependent = 0 tax = 7000.0
+PASS
+income = 70000 dependent = 1 tax = 6300.0
+PASS
+income = 70000 dependent = 2 tax = 5250.0
+PASS
+income = 70000 dependent = 4 tax = 4200.0
+PASS
+income = 45000 dependent = 0 tax = 3150.0
+PASS
+income = 45000 dependent = 1 tax = 2835.0
+PASS
+income = 45000 dependent = 2 tax = 2362.5
+PASS
+income = 45000 dependent = 4 tax = 1890.0
+PASS
+income = 35000 dependent = 0 tax = 2100.0
+PASS
+income = 35000 dependent = 1 tax = 1890.0
+PASS
+income = 35000 dependent = 2 tax = 1575.0
+PASS
+income = 35000 dependent = 4 tax = 1260.0
+PASS
+income = 25000 dependent = 0 tax = 1250.0
+PASS
+income = 25000 dependent = 1 tax = 1125.0
+PASS
+income = 25000 dependent = 2 tax = 937.5
+PASS
+income = 25000 dependent = 4 tax = 750.0
+PASS
+income = 12000 dependent = 0 tax = 480.0
+PASS
+income = 12000 dependent = 1 tax = 432.0
+PASS
+income = 12000 dependent = 2 tax = 360.0
+PASS
+income = 12000 dependent = 4 tax = 288.0
+PASS
+income = -5000 dependent = 0 tax = -650.0
+FAIL
+income = -5000 dependent = 0 tax = -650.0
+income = -5000 dependent = 1 tax = -585.0
+FAIL
+income = -5000 dependent = 1 tax = -585.0
+income = -5000 dependent = 2 tax = -487.5
+FAIL
+income = -5000 dependent = 2 tax = -487.5
+income = -5000 dependent = 4 tax = -390.0
+FAIL
+income = -5000 dependent = 4 tax = -390.0
+FAIL: input:  (-5000, 0) , expected output:  (-5000, 0, 0) , actual output:  (-5000, 0, -650.0)
+FAIL: input:  (-5000, 1) , expected output:  (-5000, 1, 0) , actual output:  (-5000, 1, -585.0)
+FAIL: input:  (-5000, 2) , expected output:  (-5000, 2, 0) , actual output:  (-5000, 2, -487.5)
+FAIL: input:  (-5000, 4) , expected output:  (-5000, 4, 0) , actual output:  (-5000, 4, -390.0)
+24 of 28 test cases passed (85.7%)

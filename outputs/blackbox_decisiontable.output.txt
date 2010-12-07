@@ -1,0 +1,49 @@
+income = 1 dependent = 1 tax = 0.036
+PASS
+income = 20001 dependent = 1 tax = 900.045
+PASS
+income = 30001 dependent = 1 tax = 1620.054
+PASS
+income = 40001 dependent = 1 tax = 2520.063
+PASS
+income = 50001 dependent = 1 tax = 4500.09
+PASS
+income = 90001 dependent = 1 tax = 10530.117
+PASS
+income = 1 dependent = 2 tax = 0.03
+PASS
+income = 20001 dependent = 2 tax = 750.0375
+PASS
+income = 30001 dependent = 2 tax = 1350.045
+PASS
+income = 40001 dependent = 2 tax = 2100.0525
+PASS
+income = 50001 dependent = 2 tax = 3750.075
+PASS
+income = 90001 dependent = 2 tax = 8775.0975
+PASS
+income = 1 dependent = 4 tax = 0.024
+PASS
+income = 20001 dependent = 4 tax = 600.03
+PASS
+income = 30001 dependent = 4 tax = 1080.036
+PASS
+income = 40001 dependent = 4 tax = 1680.042
+PASS
+income = 50001 dependent = 4 tax = 3000.06
+PASS
+income = 90001 dependent = 4 tax = 7020.078
+PASS
+income = 1 dependent = 0 tax = 0.04
+PASS
+income = 20001 dependent = 0 tax = 1000.05
+PASS
+income = 30001 dependent = 0 tax = 1800.06
+PASS
+income = 40001 dependent = 0 tax = 2800.07
+PASS
+income = 50001 dependent = 0 tax = 5000.1
+PASS
+income = 90001 dependent = 0 tax = 11700.13
+PASS
+24 of 24 test cases passed (100.0%)
