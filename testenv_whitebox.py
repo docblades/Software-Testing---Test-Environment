@@ -76,7 +76,7 @@ def calc_tax(inc, dep): #A
         tax = tax
 
     path.append(27)
-    print "income = {0} dependent = {1} tax = {2}".format(inc, dep, tax) #S
+    print "income = {0} dependent = {1} tax = {2}".format(inc, dep, tax) #R
 
     return (inc, dep, path, decisions)
         
