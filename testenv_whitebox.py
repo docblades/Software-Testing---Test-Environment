@@ -24,58 +24,58 @@ def calc_tax(inc, dep): #A
         path += [3,5,7,9,10]
         decisions += ['B', 'C', 'D', 'E', 'F']
         bracket = 5
-    else: #G
-        path += [3,5,7,9,11,12]
+    else: 
+        path += [3,5,7,9,11]
         decisions += ['B', 'C', 'D', 'E', 'F']
         bracket = 6
 
-    def switch(x): #H
-        decisions.append('H')
+    def switch(x): #G
+        decisions.append('G')
         if x == 1:
-            path.append(15)
-            tax = inc * .04 #I
+            path.append(13)
+            tax = inc * .04 #H
         elif x == 2:
-            path.append(16)
-            tax = inc * .05 #J
+            path.append(14)
+            tax = inc * .05 #I
         elif x == 3:
-            path.append(17)
-            tax = inc * .06 #K
+            path.append(15)
+            tax = inc * .06 #J
         elif x == 4:
-            path.append(18)
-            tax = inc * .07 #L
+            path.append(16)
+            tax = inc * .07 #K
         elif x == 5:
-            path.append(19)
-            tax = inc * .10 #M
+            path.append(17)
+            tax = inc * .10 #L
         elif x == 6:
-            path.append(20)
-            tax = inc * .13 #N
-        else:
-            path.append(21)
+            path.append(18)
+            tax = inc * .13 #M
+        else: #N
+            path.append(19)
             print "something is wrong with the income bracket computation" #O
         return tax
     
-    path.append(14)    
+    path.append(12)    
     tax = switch(bracket)
 
-    path.append(22)
-    if (dep == 1): #P
-        path.append(23)
-        decisions.append('P')
+    path.append(20)
+    if (dep == 1): #O
+        path.append(21)
+        decisions.append('O')
         tax = tax - (.1 * tax)
-    elif (2 <= dep <= 3): #Q
-        path += [24,25]
-        decisions += ['P', 'Q']
+    elif (2 <= dep <= 3): #P
+        path += [22,23]
+        decisions += ['O', 'P']
         tax = tax - (.25 * tax)
-    elif (3 < dep): #R
-        path += [24,26,27]
-        decisions += ['P', 'Q', 'R']
+    elif (3 < dep): #Q
+        path += [22,24,25]
+        decisions += ['O', 'P', 'Q']
         tax = tax - (.4 * tax)
     else:
-        decisions += ['P', 'Q', 'R']
-        path += [24,26,28]
+        decisions += ['O', 'P', 'Q']
+        path += [22,24,26]
         tax = tax
 
-    path.append(29)
+    path.append(27)
     print "income = {0} dependent = {1} tax = {2}".format(inc, dep, tax) #S
 
     return (inc, dep, path, decisions)
@@ -88,11 +88,10 @@ def do_test(test_cases):
         'E': 0,
         'F': 0,
         'G': 0,
-        'H': 0,
         'P': 0,
         'Q': 0,
-        'R': 0}
-    edges_hit = dict.fromkeys(range(1,29), 0)
+        }
+    edges_hit = dict.fromkeys(range(1,28), 0)
 
     for case in test_cases:
         result = calc_tax(case[0], case[1])
@@ -120,6 +119,11 @@ def do_test(test_cases):
         sum(edges_hit.values()),
         len(edges_hit) - missed_edges,
         float( (len(edges_hit) - missed_edges) ) / float( sum(edges_hit.values()) ))
+    edges_missed = []
+    for x in edges_hit.iteritems():
+        if x[1] == 0:
+            edges_missed.append(x[0])
+    print "Edges missed: ", edges_missed
 
     missed_decisions = decisions_hit.values().count(0)
     print "{0} of {1} decisions hit ({2:.1%})".format(
@@ -130,6 +134,11 @@ def do_test(test_cases):
         sum(decisions_hit.values()),
         len(decisions_hit) - missed_decisions,
         float( (len(decisions_hit) - missed_decisions) ) / float( sum(decisions_hit.values()) ))
+    decisions_missed = []
+    for x in decisions_hit.iteritems():
+        if x[1] == 0:
+            decisions_missed.append(x[0])
+    print "Decisions missed: ", decisions_missed
     
     
     
