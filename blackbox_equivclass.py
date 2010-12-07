@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import mainstuff
+import testenv_blackbox as testenv
 #test case = (income, dependents, expected tax to 16 decimals)
 
 ##############################
@@ -41,4 +41,4 @@ test_cases = [
     ((-5000, 4), 0)
     ]
 
-mainstuff.do_test(test_cases)
+testenv.do_test(test_cases)

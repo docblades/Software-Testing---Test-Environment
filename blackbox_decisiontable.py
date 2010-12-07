@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import decision_table_stuff as testenv
+import testenv_blackbox_decisiontable as testenv
 
 # Example
 # None is the same as a dash in the decision table

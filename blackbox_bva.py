@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import mainstuff
+import testenv_blackbox as testenv
 
 test_cases = [
     ((-1, 0), 0), #expecting a failure here
@@ -16,4 +16,4 @@ test_cases = [
     ((90001, 1), 10530.117)
     ]
 
-mainstuff.do_test(test_cases)
+testenv.do_test(test_cases)
