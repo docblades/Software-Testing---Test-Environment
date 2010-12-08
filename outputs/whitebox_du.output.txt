@@ -1,0 +1,21 @@
+income = 0 dependent = 1 tax = 0.0
+inc: 0, dep: 1, edges: [1, 3, 5, 7, 9, 11, 12, 18, 20, 21, 27], decisions: ['B', 'C', 'D', 'E', 'F', 'G', 'O']
+income = 20000 dependent = 2 tax = 600.0
+inc: 20000, dep: 2, edges: [1, 2, 12, 13, 20, 22, 23, 27], decisions: ['B', 'G', 'O', 'P']
+income = 30000 dependent = 4 tax = 900.0
+inc: 30000, dep: 4, edges: [1, 3, 4, 12, 14, 20, 22, 24, 25, 27], decisions: ['B', 'C', 'G', 'O', 'P', 'Q']
+income = 40000 dependent = 0 tax = 2400.0
+inc: 40000, dep: 0, edges: [1, 3, 5, 6, 12, 15, 20, 22, 24, 26, 27], decisions: ['B', 'C', 'D', 'G', 'O', 'P', 'Q']
+income = 50000 dependent = 1 tax = 3150.0
+inc: 50000, dep: 1, edges: [1, 3, 5, 7, 8, 12, 16, 20, 21, 27], decisions: ['B', 'C', 'D', 'E', 'G', 'O']
+income = 90000 dependent = 2 tax = 6750.0
+inc: 90000, dep: 2, edges: [1, 3, 5, 7, 9, 10, 12, 17, 20, 22, 23, 27], decisions: ['B', 'C', 'D', 'E', 'F', 'G', 'O', 'P']
+income = 90001 dependent = 4 tax = 7020.078
+inc: 90001, dep: 4, edges: [1, 3, 5, 7, 9, 11, 12, 18, 20, 22, 24, 25, 27], decisions: ['B', 'C', 'D', 'E', 'F', 'G', 'O', 'P', 'Q']
+Number of test cases:  7
+26 of 27 edges hit (96.3%)
+75 edges hit, 26 unique edges hit. 34.7% efficiency
+Edges missed:  [19]
+8 of 8 decisions hit (100.0%)
+40 decisions hit, 8 unique decisions hit. 20.0% efficiency
+Decisions missed:  []
